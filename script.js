@@ -18,85 +18,366 @@ function calculadora() {
                 numero2 = Number(parseInt(numeroBase2, 2).toString(10))
                 total = numero1 + numero2
                 retorno_calculo.innerHTML = `${total}`
-                
+
             } else if (baseEscolhida2 == 'octal') {
                 numero2 = Number(parseInt(numeroBase2, 8).toString(10))
                 total = numero1 + numero2
                 retorno_calculo.innerHTML = `${total}`
 
             } else if (baseEscolhida2 == 'decimal') {
-                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
                 total = numero1 + numero2
                 retorno_calculo.innerHTML = `${total}`
 
             } else if (baseEscolhida2 == 'hexadecimal') {
-                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
                 total = numero1 + numero2
                 retorno_calculo.innerHTML = `${total}`
             }
 
         } else if (baseEscolhida1 == 'octal') {
+            numero1 = Number(parseInt(numeroBase1, 8).toString(10))
             if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
 
             } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
 
             } else if (baseEscolhida2 == 'hexadecimal') {
-
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
             }
 
         } else if (baseEscolhida1 == 'decimal') {
-
-            if (baseEscolhida1 == 'binario') {
-
-            } else if (baseEscolhida2 == 'octal') {
-
-            } else if (baseEscolhida2 == 'hexadecimal') {
-
-            }
-
-        } else if (baseEscolhida1 == 'hexadecimal') {
-
-            if (baseEscolhida1 == 'binario') {
+            numero1 = Number(numeroBase1)
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
 
             } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
 
             } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
 
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
+        } else if (baseEscolhida1 == 'hexadecimal') {
+            numero1 = Number(parseInt(numeroBase1, 16).toString(10))
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 + numero2
+                retorno_calculo.innerHTML = `${total}`
             }
         }
-
-    } else if (operadorEscolhido == 'subtracacao') {
+    } else if (operadorEscolhido == 'subtracao') {
 
         if (baseEscolhida1 == 'binario') {
+            numero1 = Number(parseInt(numeroBase1, 2).toString(10))
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
 
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
         } else if (baseEscolhida1 == 'octal') {
+            numero1 = Number(parseInt(numeroBase1, 8).toString(10))
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
 
         } else if (baseEscolhida1 == 'decimal') {
+            numero1 = Number(numeroBase1)
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
 
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
         } else if (baseEscolhida1 == 'hexadecimal') {
+            numero1 = Number(parseInt(numeroBase1, 16).toString(10))
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
 
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 - numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
         }
 
     } else if (operadorEscolhido == 'multiplicacao') {
         if (baseEscolhida1 == 'binario') {
+            numero1 = Number(parseInt(numeroBase1, 2).toString(10))
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
 
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
         } else if (baseEscolhida1 == 'octal') {
+            numero1 = Number(parseInt(numeroBase1, 8).toString(10))
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
 
         } else if (baseEscolhida1 == 'decimal') {
+            numero1 = Number(numeroBase1)
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
 
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
         } else if (baseEscolhida1 == 'hexadecimal') {
+            numero1 = Number(parseInt(numeroBase1, 16).toString(10))
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
 
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 * numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
         }
 
     } else if (operadorEscolhido == 'divisao') {
         if (baseEscolhida1 == 'binario') {
+            numero1 = Number(parseInt(numeroBase1, 2).toString(10))
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
 
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
         } else if (baseEscolhida1 == 'octal') {
+            numero1 = Number(parseInt(numeroBase1, 8).toString(10))
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
 
         } else if (baseEscolhida1 == 'decimal') {
+            numero1 = Number(numeroBase1)
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
 
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
         } else if (baseEscolhida1 == 'hexadecimal') {
+            numero1 = Number(parseInt(numeroBase1, 16).toString(10))
+            if (baseEscolhida2 == 'binario') {
+                numero2 = Number(parseInt(numeroBase2, 2).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
 
+            } else if (baseEscolhida2 == 'octal') {
+                numero2 = Number(parseInt(numeroBase2, 8).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'decimal') {
+                numero2 = Number(parseInt(numeroBase2, 10).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+
+            } else if (baseEscolhida2 == 'hexadecimal') {
+                numero2 = Number(parseInt(numeroBase2, 16).toString(10))
+                total = numero1 / numero2
+                retorno_calculo.innerHTML = `${total}`
+            }
         }
 
     }

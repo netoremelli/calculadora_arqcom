@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="marises_machine.css">
 </head>
+
 <body>
     <main>
         <video autoplay muted loop id="myVideo">
             <source src="video_caclc.mp4" type="video/mp4">
         </video>
-    <center><h1>Calculadora Wanner</h1></center>
-    <p><center>Escolha a Base: <select name="bases_conversao" id="select_base_1">
-        <option value="binario">Binário</option>
-        <option value="octal">Octal</option>
-        <option value="decimal">Decimal</option>
-        <option value="hexadecimal">Hexadecimal</option>
-    </select>
-    <input type="text" id="input_calcular_base1"></p>
-      Escolha a base: <select name="bases_convertidas" id="select_base_2">
-        <option value="binario">Binário</option>
-        <option value="octal">Octal</option>
-        <option value="decimal">Decimal</option>
-        <option value="hexadecimal">Hexadecimal</option>
-    </select>
-    <input type="text" id="input_calcular_base2"></p>
-    <p><button class="glow-button" onclick="calculadora()">= calcular</button></center></p>
-    <div id="retorno_conversao"></div>
+        <center>
+            <h1>Calculadora Wanner</h1>
+        </center>
+        <p>
+            <center>Escolha a Base: <select name="bases_conversao" id="select_base_1">
+                    <option value="binario">Binário</option>
+                    <option value="octal">Octal</option>
+                    <option value="decimal">Decimal</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
+                <input type="text" id="input_numero_base1">
+        </p>
+        Escolha a base: <select name="bases_convertidas" id="select_base_2">
+            <option value="binario">Binário</option>
+            <option value="octal">Octal</option>
+            <option value="decimal">Decimal</option>
+            <option value="hexadecimal">Hexadecimal</option>
+        </select>
+        <input type="text" id="input_numero_base2"></p>
+        <select id="select_operadores">
+            <option value="adicao">Adição</option>
+            <option value="subtracao">Subtração</option>
+            <option value="multiplicacao">Multiplicação</option>
+            <option value="divisao">Divisão</option>
+        </select>
+        <p><button class="glow-button" onclick="calculadora()">= calcular</button></center>
+        </p>
+        <div id="retorno_calculo"></div>
     </main>
 </body>
+<script src="script.js"></script>
 </html>

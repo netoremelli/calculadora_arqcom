@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="marises_machine.css">
+</head>
+<body>
+    <main>
+        <video autoplay muted loop id="myVideo">
+            <source src="video_caclc.mp4" type="video/mp4">
+        </video>
+    <center><h1>Calculadora Wanner</h1></center>
+    <p><center>Informe a base e o número: <select name="bases_conversao" id="select_base_1">
+        <option value="binario">Binário</option>
+        <option value="octal">Octal</option>
+        <option value="decimal">Decimal</option>
+        <option value="hexadecimal">Hexadecimal</option>
+    </select> <input type="text" id="input_primeiro_valor"> </center></p>
+    <p><center>Informe a base e o número: <select name="bases_convertidas" id="select_base_2">
+        <option value="binario">Binário</option>
+        <option value="octal">Octal</option>
+        <option value="decimal">Decimal</option>
+        <option value="hexadecimal">Hexadecimal</option>
+    </select> <input type="text" id="input_segundo_valor"></center></p>
+    <p><center><input type="radio" name="operacao" id="adiçao" value="adicao">
+        <label for="adicao">Adição (+)</label>
+        <input type="radio" name="operacao" id="subtracao" value="subtracao">
+        <label for="subtracao">Subtração (-)</label>
+        <input type="radio" name="operacao" id="multi" value="multi">
+        <label for="multi">Multiplicação (*)</label>
+        <input type="radio" name="operacao" id="div" value="divisao"> 
+        <label for="div">Divisão (/)</label></center> </p>
+    <p><center>Informe a base de retorno:
+    <select name="bases_convertidas" id="select_base_3">
+        <option value="binario">Binário</option>
+        <option value="octal">Octal</option>
+        <option value="decimal">Decimal</option>
+        <option value="hexadecimal">Hexadecimal</option> </select></center> </p>
+    <p><center><button class="glow-button" onclick="calcular()">+ - * / calcular</button></center></p>
+    <div id="retorno_calculo"></div>
+    <br>
+    <p><center>Gostaria de realizar conversões de números para diferentes bases?</center></p>
+    <p><center><a href="marises-machine-kenner-wanderley.html"><button class="glow-button">= converter</button></a></center></p>
+    </main>
+</body>
+</html>
+<script>
+    function calcular(){
+        const base_primeiro = select_base_1.value
+        const base_segundo = select_base_2.value
+        const base_saida = select_base_3.value
+        const primeiroValor = Number(input_primeiro_valor.value)
+        const segundoValor = Number(input_segundo_valor.value)
+        var primeiroValorConvertido = 0
+        var segundoValorConvertido = 0
+        var valorIntermediário = 0
+        var valorFinal = 0
+        const operacao = document.querySelector("input[name='operacao']:checked").value
+        retorno_calculo.innerHTML = ``
+
+
+        if (base_primeiro == "binario"){
+            primeiroValorConvertido = parseInt(primeiroValor, 2).toString(10)
+
+            if (base_segundo == "octal"){
+                segundoValorConvertido = parseInt(segundoValor, 8).toString(10)
+            }
+            else if (base_segundo == "decimal"){
+                segundoValorConvertido = parseInt(segundoValor, 10).toString(10)   
+            }
+            else if (base_segundo == "hexadecimal"){
+                segundoValorConvertido = parseInt(segundoValor, 16).toString(10)
+            }
+            else if (base_segundo == "binario"){
+                segundoValorConvertido = parseInt(segundoValor, 2).toString(10)
+            }
+
+            if (operacao == "adicao"){
+                valorIntermediário = Number(primeiroValorConvertido) + Number(segundoValorConvertido)
+            }
+            else if (operacao == "subtracao"){
+                valorIntermediário = Number(primeiroValorConvertido) - Number(segundoValorConvertido)
+            }            
+            else if (operacao == "multi"){
+                valorIntermediário = Number(primeiroValorConvertido) * Number(segundoValorConvertido)
+            }   
+            else if (operacao == "div"){
+                valorIntermediário = Number(primeiroValorConvertido) / Number(segundoValorConvertido)
+            }       
+
+            if (base_saida == "octal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(8)
+            }
+            else if (base_saida == "decimal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(10)
+            }
+            else if (base_saida == "hexadecimal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(16)
+            }
+            else if (base_saida == "binario"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(2)
+            }
+
+            retorno_calculo.innerHTML += `O resultado da operação é ${valorFinal}, na base ${base_saida}`
+        }
+        else if (base_primeiro == "octal"){
+            primeiroValorConvertido = parseInt(primeiroValor, 8).toString(10)
+
+            if (base_segundo == "octal"){
+                segundoValorConvertido = parseInt(segundoValor, 8).toString(10)
+            }
+            else if (base_segundo == "decimal"){
+                segundoValorConvertido = parseInt(segundoValor, 10).toString(10)   
+            }
+            else if (base_segundo == "hexadecimal"){
+                segundoValorConvertido = parseInt(segundoValor, 16).toString(10)
+            }
+            else if (base_segundo == "binario"){
+                segundoValorConvertido = parseInt(segundoValor, 2).toString(10)
+            }
+
+            if (operacao == "adicao"){
+                valorIntermediário = Number(primeiroValorConvertido) + Number(segundoValorConvertido)
+            }
+            else if (operacao == "subtracao"){
+                valorIntermediário = Number(primeiroValorConvertido) - Number(segundoValorConvertido)
+            }            
+            else if (operacao == "multi"){
+                valorIntermediário = Number(primeiroValorConvertido) * Number(segundoValorConvertido)
+            }   
+            else if (operacao == "div"){
+                valorIntermediário = Number(primeiroValorConvertido) / Number(segundoValorConvertido)
+            }       
+
+            if (base_saida == "octal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(8)
+            }
+            else if (base_saida == "decimal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(10)
+            }
+            else if (base_saida == "hexadecimal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(16)
+            }
+            else if (base_saida == "binario"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(2)
+            }
+
+            retorno_calculo.innerHTML += `O resultado da operação é ${valorFinal}, na base ${base_saida}`
+        }else if (base_primeiro == "decimal"){
+            primeiroValorConvertido = parseInt(primeiroValor, 10).toString(10)
+
+            if (base_segundo == "octal"){
+                segundoValorConvertido = parseInt(segundoValor, 8).toString(10)
+            }
+            else if (base_segundo == "decimal"){
+                segundoValorConvertido = parseInt(segundoValor, 10).toString(10)   
+            }
+            else if (base_segundo == "hexadecimal"){
+                segundoValorConvertido = parseInt(segundoValor, 16).toString(10)
+            }
+            else if (base_segundo == "binario"){
+                segundoValorConvertido = parseInt(segundoValor, 2).toString(10)
+            }
+
+            if (operacao == "adicao"){
+                valorIntermediário = Number(primeiroValorConvertido) + Number(segundoValorConvertido)
+            }
+            else if (operacao == "subtracao"){
+                valorIntermediário = Number(primeiroValorConvertido) - Number(segundoValorConvertido)
+            }            
+            else if (operacao == "multi"){
+                valorIntermediário = Number(primeiroValorConvertido) * Number(segundoValorConvertido)
+            }   
+            else if (operacao == "div"){
+                valorIntermediário = Number(primeiroValorConvertido) / Number(segundoValorConvertido)
+            }       
+
+            if (base_saida == "octal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(8)
+            }
+            else if (base_saida == "decimal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(10)
+            }
+            else if (base_saida == "hexadecimal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(16)
+            }
+            else if (base_saida == "binario"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(2)
+            }
+
+            retorno_calculo.innerHTML += `O resultado da operação é ${valorFinal}, na base ${base_saida}`
+        }else if (base_primeiro == "hexadecimal"){
+            primeiroValorConvertido = parseInt(primeiroValor, 16).toString(10)
+
+            if (base_segundo == "octal"){
+                segundoValorConvertido = parseInt(segundoValor, 8).toString(10)
+            }
+            else if (base_segundo == "decimal"){
+                segundoValorConvertido = parseInt(segundoValor, 10).toString(10)   
+            }
+            else if (base_segundo == "hexadecimal"){
+                segundoValorConvertido = parseInt(segundoValor, 16).toString(10)
+            }
+            else if (base_segundo == "binario"){
+                segundoValorConvertido = parseInt(segundoValor, 2).toString(10)
+            }
+
+            if (operacao == "adicao"){
+                valorIntermediário = Number(primeiroValorConvertido) + Number(segundoValorConvertido)
+            }
+            else if (operacao == "subtracao"){
+                valorIntermediário = Number(primeiroValorConvertido) - Number(segundoValorConvertido)
+            }            
+            else if (operacao == "multi"){
+                valorIntermediário = Number(primeiroValorConvertido) * Number(segundoValorConvertido)
+            }   
+            else if (operacao == "div"){
+                valorIntermediário = (Number(primeiroValorConvertido) / Number(segundoValorConvertido))
+            }       
+
+            if (base_saida == "octal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(8)
+            }
+            else if (base_saida == "decimal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(10)
+            }
+            else if (base_saida == "hexadecimal"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(16)
+            }
+            else if (base_saida == "binario"){
+                valorFinal = parseInt(valorIntermediário, 10).toString(2)
+            }
+
+            retorno_calculo.innerHTML += `O resultado da operação é ${valorFinal}, na base ${base_saida}`
+        }
+           
+    }
+</script>
